@@ -1,0 +1,152 @@
+/* variables */
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --primary-color: hsl(0, 0%, 95%);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --font-size: 15px;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  overflow: hidden;
+}
+
+/* main */
+main {
+  background: var(--Very-light-gray);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* container */
+.container {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  max-width: 1200px;
+}
+
+.card_pic {
+  padding: 2.5rem;
+}
+
+.card_pic:first-child {
+  background: var(--Bright-orange);
+  border-radius: 7px 0 0 7px;
+}
+
+.card_pic:nth-child(2) {
+  background: var(--Dark-cyan);
+}
+
+.card_pic:nth-child(3) {
+  background: var(--Very-dark-cyan);
+  border-radius: 0 7px 7px 0;
+}
+
+/* header_content */
+.vehicle h2 {
+  margin: 2.5rem 0;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2rem;
+  color: var(--Very-light-gray);
+  text-transform: uppercase;
+}
+
+/* paragraph */
+.vehicle p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: var(--font-size);
+  color: var(--Transparent-white);
+  font-weight: 400;
+  padding: 0.5rem 0rem;
+  line-height: 1.5;
+}
+
+/* button */
+.vehicle button {
+  background: var(--Very-light-gray);
+  font-size: var(--font-size);
+  margin-top: 5rem;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  border: 0.5px;
+  transition: all 150ms;
+  cursor: pointer;
+}
+
+.card_pic:first-child button {
+  color: var(--Bright-orange);
+}
+
+.card_pic:nth-child(2) button {
+  color: var(--Dark-cyan);
+}
+
+.card_pic:nth-child(3) button {
+  color: var(--Very-dark-cyan);
+}
+
+.vehicle button:hover {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+@media screen and (max-width: 1439px) {
+  .container {
+    width: 90%;
+  }
+
+  .card_pic {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  main {
+    padding: 3rem 0;
+  }
+  .container {
+    flex-direction: column;
+    width: 80%;
+  }
+  .card_pic {
+    padding: 2.5rem 4rem;
+  }
+  .card_pic:first-child {
+    border-radius: 7px 7px 0 0;
+  }
+  .card_pic:nth-child(3) {
+    border-radius: 0 0 7px 7px;
+  }
+  .vehicle button {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .containder {
+    width: 90%;
+  }
+  .card_pic {
+    padding: 2.5rem;
+  }
+}
